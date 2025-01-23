@@ -12,6 +12,11 @@ const models = {
     user_master_tbl: user_master_tbl.init(sequelize)
 }
 
+//associations
+Object.values(models)
+.filter(model => typeof model.associate === 'function')
+.forEach(model => model.associate(models));
+
 module.exports = {
     sequelize,
     Sequelize,

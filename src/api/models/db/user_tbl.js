@@ -34,6 +34,8 @@ class user_tbl extends Model {
             freezeTableName:true
         })
     }
+
+    
 }
 
 module.exports = user_tbl

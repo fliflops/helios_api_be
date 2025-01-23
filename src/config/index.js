@@ -8,9 +8,8 @@ module.exports = {
     env: process.env.NODE_ENV,
     port: process.env.PORT,
     jwtSecret: process.env.JWT_SECRET,
+    jwtAPISecret: process.env.JWT_API_SECRET,
     jwtExpirationInterval: process.env.JWT_EXPIRATION_MINUTES,
-    jwtRefreshSecret: process.env.JWT_REFRESH_SECRET,
-    jwtRefreshExpiration: process.env.JWT_REFRESH_EXPIRATION,
     emailConfig: {
         host: process.env.EMAIL_HOST,
         port: process.env.EMAIL_PORT,
@@ -20,8 +19,9 @@ module.exports = {
     redis: {
         port: process.env.REDIS_PORT,
         host: process.env.REDIS_URL,
-        expire: process.env.REDIS_SESSION_EXPIRE
+        //expire: process.env.REDIS_SESSION_EXPIRE
     },
+    redis_prefix: 'helios_api:',
     db: {
         host: process.env.DB_HOST,
         database: process.env.DB_NAME,

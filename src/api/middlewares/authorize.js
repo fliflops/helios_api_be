@@ -23,7 +23,7 @@ module.exports = (req,res,next) => {
             }
 
             const user = await userService.getUser({
-                email: result.email
+                username: result.username
             })
            
             req.processor = {
